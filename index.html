@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f4f1eb">
+<title>Rithik Anand | Portfolio</title>
+<meta name="description" content="Rithik Anand — Data Science, Machine Learning and Analytics. NIT Trichy and IIT Madras.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f4f1eb;--white:#fffefa;--ink:#191b1a;--muted:#5f625c;--line:#dcd8cf;--brown:#513a2d;--rust:#a64d32;--soft:#eee9df;--sans:"DM Sans",Arial,sans-serif;--display:"Manrope",Arial,sans-serif;--mono:"DM Mono",monospace}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.7 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}a:hover{color:var(--rust)}
+.wrap{width:min(1120px,calc(100% - 56px));margin:auto}
+
+/* NAV */
+.topbar{position:sticky;top:0;z-index:20;background:rgba(244,241,235,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{display:flex;align-items:center;gap:12px;font:800 16px var(--display);letter-spacing:-.03em}
+.brand-mark{width:38px;height:38px;border:1px solid var(--brown);display:grid;place-items:center;color:var(--brown);font:500 12px var(--mono)}
+.navlinks{display:flex;align-items:center;gap:32px;color:#4d504a;font-size:14.5px;font-weight:600}
+.navlinks a{padding:8px 0}
+.nav-cta{border:1px solid var(--brown);padding:11px 18px;font-size:13px;font-weight:700;transition:.2s}
+.nav-cta:hover{background:var(--brown);color:#fff}
+
+/* HERO */
+.hero{padding:96px 0 72px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero:after{content:"";position:absolute;right:-145px;top:35px;width:490px;height:490px;border:1px solid #d8d0c3;border-radius:50%;box-shadow:0 0 0 44px rgba(216,208,195,.15),0 0 0 88px rgba(216,208,195,.10);pointer-events:none}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr;gap:48px;align-items:start}
+.eyebrow,.section-kicker{font:500 12.5px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--rust)}
+.hero h1{font:800 clamp(40px,9vw,92px)/1.02 var(--display);letter-spacing:-.055em;margin:22px 0 20px;white-space:nowrap}
+.hero h1 span{color:inherit}
+.role{font:600 clamp(20px,2.4vw,26px) var(--display);margin:0 0 18px;color:#41443f}
+.intro{max-width:680px;color:var(--muted);font-size:18px;line-height:1.8;margin:0}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;font-size:13.5px;font-weight:700;border:1px solid var(--brown);transition:.2s}
+.btn.primary{background:var(--brown);color:#fff}
+.btn.primary:hover{background:var(--rust);border-color:var(--rust);color:#fff}
+.btn.secondary:hover{background:var(--white)}
+
+/* EDUCATION CARDS */
+.hero-aside{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+.aside-label{grid-column:1/-1;font:500 12px var(--mono);letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+.school{display:flex;align-items:center;gap:18px;min-width:0;padding:20px 22px;background:var(--white);border:1px solid var(--line);transition:border-color .2s,transform .2s}
+.school:hover{border-color:#b7a99a;transform:translateY(-2px)}
+.school img{width:60px;height:60px;padding:4px;object-fit:contain;flex:none}
+.school strong{display:block;font:700 16px/1.35 var(--display)}
+.school span{display:block;color:var(--muted);font-size:13.5px;line-height:1.5;margin-top:5px}
+.aside-note{grid-column:1/-1;font-size:15.5px;color:var(--muted);line-height:1.75;margin:6px 0 0;max-width:720px}
+
+/* METRICS */
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);background:var(--white);border:1px solid var(--line);margin:40px auto 0}
+.metric{padding:26px 28px;border-right:1px solid var(--line)}
+.metric:last-child{border:0}
+.metric strong{display:block;font:800 34px/1.2 var(--display);color:var(--brown)}
+.metric span{display:block;font-size:13.5px;line-height:1.5;color:var(--muted);margin-top:8px}
+
+/* SECTIONS */
+section{padding:84px 0;border-bottom:1px solid var(--line)}
+.section-head{display:grid;grid-template-columns:220px 1fr;gap:40px;margin-bottom:42px}
+.section-kicker{padding-top:8px}
+.section-title{font:800 clamp(34px,4vw,50px)/1.1 var(--display);letter-spacing:-.05em;margin:0}
+.section-desc{color:var(--muted);max-width:640px;margin:14px 0 0;font-size:16.5px;line-height:1.75}
+
+/* EXPERIENCE */
+.experience{border-top:1px solid var(--line)}
+.entry{display:grid;grid-template-columns:220px 1fr;gap:40px;padding:32px 0;border-bottom:1px solid var(--line)}
+.date{font:400 12.5px var(--mono);color:var(--muted);padding-top:6px}
+.entry h3{font:700 23px/1.3 var(--display);margin:0}
+.org{font-size:15px;color:var(--rust);font-weight:600;margin:4px 0 15px}
+.entry ul{padding-left:18px;margin:0;color:#4d504a;font-size:15.5px;line-height:1.8}
+.entry li{padding-left:4px;margin:6px 0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none!important;padding:0!important;margin:18px 0 0!important}
+.tags li{font:400 12px var(--mono);background:var(--soft);color:#65584d;padding:7px 11px;margin:0!important}
+
+/* PROJECTS */
+.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.project{background:var(--white);border:1px solid var(--line);padding:30px 30px 26px;min-height:270px;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+.project:hover{transform:translateY(-3px);border-color:#b7a99a}
+.project:last-child{grid-column:1/-1;min-height:0}
+.project-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:19px}
+.project-no{font:400 12.5px var(--mono);color:var(--rust)}
+.project-date{font:400 12px var(--mono);color:#7d7c75}
+.project h3{font:700 23px/1.25 var(--display);margin:0 0 11px}
+.project .outcome{font-size:13.5px;font-weight:700;color:var(--rust);margin-bottom:12px}
+.project p{font-size:15.5px;line-height:1.75;color:var(--muted);margin:0}
+.project .tags{margin-top:auto!important;padding-top:20px!important}
+
+/* ABOUT */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.subhead{font:800 25px var(--display);margin:0 0 20px}
+.simple-list{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.simple-list li{padding:16px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.simple-list small{display:block;color:var(--muted);font-size:14px;line-height:1.65;margin-top:5px}
+.skill-list{border-top:1px solid var(--line)}
+.skill-row{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:15px 0;border-bottom:1px solid var(--line);font-size:15px}
+.skill-row span:first-child{font:400 12px var(--mono);color:var(--rust);text-transform:uppercase;padding-top:2px}
+.skill-row span:last-child{color:#4d504a}
+.education{margin-top:40px}
+.edu-item{padding:15px 0;border-top:1px solid var(--line);font-size:15.5px}
+.edu-item:last-child{border-bottom:1px solid var(--line)}
+.edu-item strong{display:block}
+.edu-item span{color:var(--muted);font-size:14px}
+
+/* CONTACT */
+.contact{padding:88px 0 58px;background:var(--brown);color:var(--white)}
+.contact .section-kicker{color:#d8a48e}
+.contact h2{font:800 clamp(42px,6vw,68px)/1.02 var(--display);letter-spacing:-.04em;margin:17px 0}
+.contact p{max-width:560px;color:#e8e0d8;font-size:16.5px;line-height:1.8}
+.contact-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.contact-links a{border:1px solid rgba(255,255,255,.38);padding:13px 18px;font-size:14px;font-weight:600;transition:.2s}
+.contact-links a:hover{background:#fff;color:var(--brown)}
+.footerline{display:flex;justify-content:space-between;gap:20px;border-top:1px solid rgba(255,255,255,.2);margin-top:70px;padding-top:20px;color:#d2c8be;font:400 12px var(--mono)}
+
+/* RESPONSIVE */
+@media(max-width:900px){.hero-aside{grid-template-columns:1fr}}
+@media(max-width:800px){
+ .section-head,.entry{grid-template-columns:1fr;gap:12px}
+ .section-head{margin-bottom:30px}
+ .split{gap:42px}
+}
+@media(max-width:580px){
+ .wrap{width:min(100% - 36px,1120px)}
+ .nav{height:66px}
+ .navlinks{gap:14px;font-size:12.5px}
+ .navlinks a:nth-child(3),.nav-cta{display:none}
+ .hero{padding:64px 0 44px}
+ .hero:after{right:-280px;top:90px}
+ .hero h1{font-size:clamp(32px,10.5vw,48px)}
+ .intro{font-size:16px}
+ .metrics{grid-template-columns:1fr 1fr}
+ .metric{padding:18px;border-bottom:1px solid var(--line)}
+ .metric:nth-child(2){border-right:0}
+ .metric:nth-child(3),.metric:nth-child(4){border-bottom:0}
+ .metric strong{font-size:26px}
+ .metric span{font-size:12.5px}
+ section{padding:60px 0}
+ .project-grid,.split{grid-template-columns:1fr}
+ .project{min-height:0}
+ .skill-row{grid-template-columns:105px 1fr;gap:12px}
+ .footerline{flex-direction:column;gap:8px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+ <div class="wrap nav">
+  <a class="brand" href="#top"><span class="brand-mark">RA.</span><span>RITHIK ANAND</span></a>
+  <nav class="navlinks" aria-label="Main navigation">
+   <a href="#experience">Experience</a>
+   <a href="#projects">Projects</a>
+   <a href="#about">About</a>
+   <a href="#contact">Contact</a>
+  </nav>
+  <a class="nav-cta" href="mailto:rithikanand2005@gmail.com">LET'S CONNECT ↗</a>
+ </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+ <div class="wrap">
+  <div class="hero-inner">
+
+   <div>
+    <div class="eyebrow">DATA SCIENCE · MACHINE LEARNING · ANALYTICS</div>
+    <h1>Rithik <span>Anand.</span></h1>
+    <p class="role">I turn data into decisions.</p>
+    <p class="intro">I’m a data science and engineering student interested in building practical machine learning systems. My work spans forecasting, NLP, generative AI and explainable modelling — with an emphasis on measurable outcomes and clear communication.</p>
+    <div class="actions">
+     <a class="btn primary" href="#projects">EXPLORE MY WORK ↘</a>
+     <a class="btn secondary" href="mailto:rithikanand2005@gmail.com">GET IN TOUCH ↗</a>
+    </div>
+   </div>
+
+   <aside class="hero-aside">
+    <div class="aside-label">EDUCATION &amp; LEADERSHIP</div>
+
+    <div class="school">
+     <img src="https://commons.wikimedia.org/wiki/Special:FilePath/NITT_logo.png" alt="NIT Tiruchirappalli logo">
+     <div><strong>NIT Tiruchirappalli</strong><span>B.Tech · Electrical &amp; Electronics Engineering</span></div>
+    </div>
+
+    <div class="school">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3ne8d2xVTXCkMtSmFVDHdKVdEwGkSy93OqCINsPTm_w&amp;s=10" alt="IIT Madras logo">
+     <div><strong>IIT Madras</strong><span>B.Sc · Data Science and Applications</span></div>
+    </div>
+
+    <div class="school">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShvfeNTHS3CdABkHU4Ez5VggfMHOPJYzffgfLHf95kmQ&amp;s=10" alt="DataByte logo">
+     <div><strong>DataByte · Head</strong><span>Machine Learning Club · NIT Trichy</span></div>
+    </div>
+
+    <p class="aside-note">Building practical machine learning systems across forecasting, NLP, generative AI and analytics.</p>
+   </aside>
+
+  </div>
+
+  <div class="metrics">
+   <div class="metric"><strong>44K+</strong><span>SKU–Zone–Channel sales series modelled</span></div>
+   <div class="metric"><strong>+0.20</strong><span>R² improvement through segmentation</span></div>
+   <div class="metric"><strong>Top 50</strong><span>Hack for Humanity 2026</span></div>
+   <div class="metric"><strong>30+</strong><span>Members led at DataByte, NIT Trichy</span></div>
+  </div>
+ </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+ <div class="wrap">
+  <div class="section-head">
+   <div class="section-kicker">01 / EXPERIENCE</div>
+   <div>
+    <h2 class="section-title">Where I’ve made<br>an impact.</h2>
+    <p class="section-desc">Applying analytical thinking and machine learning to research and business problems.</p>
+   </div>
+  </div>
+
+  <div class="experience">
+   <article class="entry">
+    <div class="date">MAY 2026 — JUL 2026</div>
+    <div>
+     <h3>Data Science Intern</h3>
+     <p class="org">Positive Integers Pvt. Ltd.</p>
+     <ul>
+      <li>Built machine learning models to forecast sales across 44,000+ SKU–Zone–Channel combinations for an FMCG client.</li>
+      <li>Engineered business features including inventory proxies, seasonality and cross-SKU cannibalisation.</li>
+      <li>Improved model R² by 0.20 through K-Means segmentation of similar time series; used SHAP to explain predictions in an interactive HTML dashboard.</li>
+      <li>Added a champion-model selection strategy to select the best-performing model for each SKU combination.</li>
+     </ul>
+     <ul class="tags"><li>Forecasting</li><li>Python</li><li>K-Means</li><li>SHAP</li><li>Feature Engineering</li></ul>
+    </div>
+   </article>
+
+   <article class="entry">
+    <div class="date">NOV 2025 — DEC 2025</div>
+    <div>
+     <h3>Research Intern</h3>
+     <p class="org">Indian Institute of Management Ahmedabad</p>
+     <ul>
+      <li>Analysed foreign direct investment (FDI) inflows using cross-country panel data from the World Bank, UNDP and UNCTAD.</li>
+      <li>Built and cleaned a panel dataset containing 3,600+ country-year observations.</li>
+      <li>Compared pooled OLS, fixed-effects and random-effects models to study macroeconomic drivers of FDI differences.</li>
+     </ul>
+     <ul class="tags"><li>Econometrics</li><li>Panel Data</li><li>Python</li><li>Statistical Modelling</li></ul>
+    </div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+ <div class="wrap">
+  <div class="section-head">
+   <div class="section-kicker">02 / SELECTED WORK</div>
+   <div>
+    <h2 class="section-title">Projects with<br>a purpose.</h2>
+    <p class="section-desc">A selection of applied machine learning, NLP and GenAI work. Each project starts with a problem and ends with something useful.</p>
+   </div>
+  </div>
+
+  <div class="project-grid">
+
+   <article class="project">
+    <div class="project-top"><span class="project-no">PROJECT / 01</span><span class="project-date">MAY — JUN 2026</span></div>
+    <h3>CardioGraph AI</h3>
+    <div class="outcome">~0.80 ROC-AUC · 70,000+ records</div>
+    <p>An explainable cardiovascular risk prediction system using CatBoost. SHAP surfaces the factors behind each prediction, while a Streamlit dashboard makes risk assessment and visualisation accessible.</p>
+    <ul class="tags"><li>CatBoost</li><li>SHAP</li><li>Streamlit</li></ul>
+   </article>
+
+   <article class="project">
+    <div class="project-top"><span class="project-no">PROJECT / 02</span><span class="project-date">MAY — JUN 2026</span></div>
+    <h3>GenAI Resume Matcher</h3>
+    <div class="outcome">Context-aware candidate matching</div>
+    <p>A resume screening tool that uses retrieval-augmented generation and GPT-4o-mini to compare profiles with job descriptions, summarise strengths and skill gaps, and rank candidates.</p>
+    <ul class="tags"><li>RAG</li><li>GPT-4o-mini</li><li>Streamlit</li></ul>
+   </article>
+
+   <article class="project">
+    <div class="project-top"><span class="project-no">PROJECT / 03</span><span class="project-date">APR — MAY 2026</span></div>
+    <h3>Healthcare Analytics Assistant</h3>
+    <div class="outcome">Natural-language access to structured records</div>
+    <p>An assistant built with FastMCP, Flask REST APIs and MongoDB. Its tools translate plain-language questions into structured lookups across patient, encounter, procedure and payer data.</p>
+    <ul class="tags"><li>FastMCP</li><li>Flask</li><li>MongoDB</li></ul>
+   </article>
+
+   <article class="project">
+    <div class="project-top"><span class="project-no">PROJECT / 04</span><span class="project-date">JAN — FEB 2026</span></div>
+    <h3>AI-Powered Meeting Intelligence System</h3>
+    <div class="outcome">12+ meeting scenarios evaluated · LLM-as-Judge</div>
+    <p>A multi-agent system built with LangGraph, OpenAI APIs and Streamlit that turns unstructured meeting transcripts into summaries, action items, deadlines and automated follow-up emails. A state-driven orchestration pipeline coordinates specialised agents, and manual review with LLM-as-Judge assessment improved extraction consistency and reduced hallucinated outputs.</p>
+    <ul class="tags"><li>LangGraph</li><li>OpenAI APIs</li><li>Multi-Agent</li><li>Streamlit</li></ul>
+   </article>
+
+   <article class="project">
+    <div class="project-top"><span class="project-no">PROJECT / 05</span><span class="project-date">JAN — FEB 2025</span></div>
+    <h3>UPI &amp; Banking Fraud SMS Detection</h3>
+    <div class="outcome">86% F1 baseline → 92% F1 with DistilBERT</div>
+    <p>An NLP pipeline to classify fraudulent and legitimate SMS messages. Fine-tuned DistilBERT on noisy Hinglish text and masked URLs, phone numbers and OTP patterns during preprocessing.</p>
+    <ul class="tags"><li>NLP</li><li>DistilBERT</li><li>Hinglish</li></ul>
+   </article>
+
+  </div>
+ </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+ <div class="wrap">
+  <div class="section-head">
+   <div class="section-kicker">03 / BEYOND THE WORK</div>
+   <div>
+    <h2 class="section-title">A little more<br>about me.</h2>
+    <p class="section-desc">The teams I contribute to, the skills I work with and the academic foundations behind my work.</p>
+   </div>
+  </div>
+
+  <div class="split">
+
+   <div>
+    <h3 class="subhead">Leadership &amp; recognition</h3>
+    <ul class="simple-list">
+     <li><strong>Head, DataByte</strong><small>Machine Learning &amp; Analytics Club, NIT Trichy · Jan 2025 – Present. Lead 30+ members across ML, analytics and GenAI initiatives; mentor project teams and help organise workshops and competitions.</small></li>
+     <li><strong>Top 50 — Hack for Humanity 2026</strong><small>Recognised among the top 50 teams in the global environmental innovation hackathon.</small></li>
+     <li><strong>Semifinalist — Statistella</strong><small>Data analytics and machine learning competition at IIT (BHU).</small></li>
+     <li><strong>Kaggle competition placements</strong><small>Top 2% (52 / 3,022) and Top 1.5% (53 / 4,317).</small></li>
+    </ul>
+   </div>
+
+   <div>
+    <h3 class="subhead">Technical toolkit</h3>
+    <div class="skill-list">
+     <div class="skill-row"><span>Languages</span><span>Python, C++, SQL</span></div>
+     <div class="skill-row"><span>Core areas</span><span>Machine Learning, NLP, Generative AI, RAG, Data Analytics</span></div>
+     <div class="skill-row"><span>Frameworks</span><span>Streamlit, Flask, FastMCP</span></div>
+     <div class="skill-row"><span>Databases</span><span>MySQL, MongoDB</span></div>
+     <div class="skill-row"><span>Tools</span><span>Jupyter, Google Colab, Excel, Power BI, Git</span></div>
+    </div>
+
+    <div class="education">
+     <h3 class="subhead">Education</h3>
+     <div class="edu-item"><strong>B.Tech — Electrical and Electronics Engineering</strong><span>National Institute of Technology, Tiruchirappalli · 2023 – Present</span></div>
+     <div class="edu-item"><strong>B.Sc — Data Science and Applications</strong><span>Indian Institute of Technology Madras · 2023 – Present</span></div>
+    </div>
+   </div>
+
+  </div>
+ </div>
+</section>
+
+</main>
+
+<!-- CONTACT -->
+<footer class="contact" id="contact">
+ <div class="wrap">
+  <div class="section-kicker">04 / CONTACT</div>
+  <h2>Have a problem<br>worth solving?</h2>
+  <p>I’m interested in opportunities across data science, analytics and machine learning. If you’re building something meaningful, I’d be glad to connect.</p>
+  <div class="contact-links">
+   <a href="mailto:rithikanand2005@gmail.com">rithikanand2005@gmail.com ↗</a>
+   <a href="https://github.com/rithik2812" target="_blank" rel="noopener">GITHUB ↗</a>
+   <a href="https://www.linkedin.com/in/rithik-anand-703a802a1" target="_blank" rel="noopener">LINKEDIN ↗</a>
+   <a href="tel:+916369299156">+91 63692 99156</a>
+  </div>
+  <div class="footerline">
+   <span>© RITHIK ANAND</span>
+  </div>
+ </div>
+</footer>
+
+</body>
+</html>
