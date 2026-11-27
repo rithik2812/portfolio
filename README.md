@@ -2,7 +2,7 @@
 
 A personal portfolio website showcasing my work, experience, projects, technical skills, education, and achievements in Data Science, Machine Learning, and Analytics.
 
-🔗 **Live Portfolio:** [https://rithik-anand-nitt.vercel.app/](#)
+🔗 **Live Portfolio:** https://rithik-anand-nitt.vercel.app/(#)
 
 ---
 
